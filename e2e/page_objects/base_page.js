@@ -7,7 +7,7 @@ class BasePage {
 	}
 
 	async isCurrentPage(mainElement = null) {
-		I.waitForElement(mainElement || this.pageTitle, this.timeout);
+		I.waitForElement(mainElement || this.addNotesButton, this.timeout);
 	}
 
 	async fillField(field, value, timeout = this.timeout) {

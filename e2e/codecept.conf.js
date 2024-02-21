@@ -12,7 +12,6 @@ exports.config = {
             url: process.env.BASE_URL,
             show: process.env.SHOW_BROWSER === 'true',
             browser: process.env.BROWSER,
-            //windowSize: process.env.WINDOW_SIZE,
             waitForNavigation: "domcontentloaded",
             waitForAction: 700,
             chromium: {
@@ -36,6 +35,7 @@ exports.config = {
 	},
 	include: {
 		I: './steps_file.js',
+		NotesAppPage: './page_objects/notesApp_page.js'
 	},
 	async bootstrapAll() {	
 	},

@@ -35,7 +35,8 @@ exports.config = {
 	},
 	include: {
 		I: './steps_file.js',
-		NotesAppPage: './page_objects/notesApp_page.js'
+		NotesAppPage: './page_objects/notesApp_page.js',
+		NotesApiPage: './page_objects/notesApi_page.js'
 	},
 	async bootstrapAll() {	
 	},

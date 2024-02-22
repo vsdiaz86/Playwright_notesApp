@@ -20,7 +20,7 @@ class NotesApiPage {
     assert.strictEqual(response.data[0].content, 'Content of the new note');
     assert.strictEqual(response.data[0].__v, 0);
     return response.data;
-    
+
   }
 };
 

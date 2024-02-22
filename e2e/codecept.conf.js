@@ -8,29 +8,29 @@ env = dotenvParseVariables(env.parsed);
 exports.config = {
 	output: './output',
 	helpers: {
-        Playwright: {
-            url: process.env.BASE_URL,
-            show: process.env.SHOW_BROWSER === 'true',
-            browser: process.env.BROWSER,
-            waitForNavigation: "domcontentloaded",
-            waitForAction: 700,
-            chromium: {
-                args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage',
-                    '--ignore-certificate-errors']
-            },
-            firefox: {
-                args: ['--no-sandbox', '--ignore-certificate-errors']
-            }
+		Playwright: {
+			url: process.env.BASE_URL,
+			show: process.env.SHOW_BROWSER === 'true',
+			browser: process.env.BROWSER,
+			waitForNavigation: "domcontentloaded",
+			waitForAction: 700,
+			chromium: {
+				args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage',
+					'--ignore-certificate-errors']
+			},
+			firefox: {
+				args: ['--no-sandbox', '--ignore-certificate-errors']
+			}
 		},
 		CustomHelper: {
 			require: './support/helpers/custom_helper.js',
 		},
-		ResembleHelper : {
+		ResembleHelper: {
 			require: "codeceptjs-resemblehelper",
-			screenshotFolder : "./output/",
+			screenshotFolder: "./output/",
 			baseFolder: "./support/screenshots/base/",
 			diffFolder: "./support/screenshots/diff/"
-		  },
+		},
 		REST: {}
 	},
 	include: {
@@ -38,7 +38,7 @@ exports.config = {
 		NotesAppPage: './page_objects/notesApp_page.js',
 		NotesApiPage: './page_objects/notesApi_page.js'
 	},
-	async bootstrapAll() {	
+	async bootstrapAll() {
 	},
 	async teardownAll() {
 	},
@@ -52,7 +52,7 @@ exports.config = {
 	plugins: {
 		allure: {
 			enabled: true,
-			require: '@codeceptjs/allure-legacy',  
+			require: '@codeceptjs/allure-legacy',
 			outputDir: 'output'
 		},
 		screenshotOnFail: {

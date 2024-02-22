@@ -6,7 +6,7 @@ const FIELD_VALUE = '<VALUE>';
 //#region .:  Addying a new note :.
 
 Given('I am already on the Notes App main page', async () => {
-	await NotesAppPage.accessLoginPage();
+    await NotesAppPage.accessLoginPage();
 });
 
 When('I click on the add note button', async () => {
@@ -21,7 +21,7 @@ When('I fill the field body with the value {string}', async (body) => {
     within({ frame: NotesAppPage.bodyIframe }, () => {
         NotesAppPage.fillField(NotesAppPage.bodyInputField, body);
     });
-  });
+});
 
 When('I click on the save button', async () => {
     await NotesAppPage.click(NotesAppPage.saveNotesButton);

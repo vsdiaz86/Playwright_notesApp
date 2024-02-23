@@ -12,3 +12,4 @@ Feature: Manage Notes
         And I fill the field title with the value 'Title `~!@#$%^&*()_-+={}[]|\:;"<>,.?/'
         And I fill the field body with the value 'Body `~!@#$%^&*()_-+={}[]|\:;"<>,.?/'
         And I click on the save button
+        #Save button does not work

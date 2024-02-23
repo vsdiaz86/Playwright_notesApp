@@ -1,6 +1,7 @@
 const { I, NotesAppPage } = inject();
 const timeout = 60;
 const FIELD_VALUE = '<VALUE>';
+let noteID;
 
 
 //#region .:  Addying a new note :.

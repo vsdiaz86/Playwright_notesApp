@@ -11,7 +11,10 @@ class NotesAppPage extends BasePage {
 		this.bodyIframe = 'iframe[id="content_ifr"]';
 		this.bodyInputField = 'body[id="tinymce"]';
 		this.saveNotesButton = "//i[@class='bi bi-check']";
-
+		this.titleDescField = '//td[text()="<VALUE>"]';
+		this.contentDescField = '//p[text()="<VALUE>"]';
+		this.editNotesButton = "//i[@class='bi bi-pencil-square']";
+		this.deleteNotesButton = "//i[@class='bi bi-trash']";
 	}
 
 	async accessLoginPage() {

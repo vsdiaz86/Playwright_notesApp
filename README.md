@@ -29,7 +29,8 @@ To run all the tests at once, use the command `npx codeceptjs run`.
 To run especific tests you can use @flags :
 
 ```bash
-$ npx codeceptjs run --grep @test
+$ npx codeceptjs run --grep @notesApp
+$ npx codeceptjs run --grep @notesApi
 ```
 
 see: https://codecept.io/commands/#run-multiple to more examples of how to execute tests
@@ -53,11 +54,11 @@ Our test suite includes visual regression specs that can be execute separately w
 To run reports:
 
 ```bash
-$ npx codeceptjs run --grep @test --plugins allure
+$ npx codeceptjs run --grep @insertFlag --plugins allure
 
 or
 
-$ npx codeceptjs run --grep @all --plugins allure
+$ npx codeceptjs run --plugins allure
 
 ```
 In local environment, go to main directory project path and execute the command 
